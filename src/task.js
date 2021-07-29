@@ -13,11 +13,12 @@ class Task {
 
 
   render() { // instance method
+    console.log(this)
     return `
       <li class="${this.PRIORITY[this.priority]}">
-        <p>Description: ${this.description}<p>
-        <p>Due Date: ${this.dueDate}<p>
-        <button data-description="${this.description}" >X</button>
+        <p>Description: ${this.description}</p>
+        <p>Due Date: ${this.dueDate}</p>
+        <button data-task='${JSON.stringify(this)}' data-description="${this.description}" >X</button>
       </li>
       `;
   }

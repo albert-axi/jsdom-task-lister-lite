@@ -30,7 +30,10 @@ newTaskForm.addEventListener("submit", e => {
 });
 
 taskUl.addEventListener("click", e => {
+ console.log(e)
   if (e.target.nodeName === "BUTTON") {
+    task = JSON.parse(e.target.dataset.task)
+    console.log(task)
     taskList.deleteTask(e.target.dataset.description)
     renderApp();
   }

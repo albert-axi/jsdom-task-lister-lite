@@ -5,15 +5,23 @@ class Task {
     3: "low"
   }
 
-  constructor(description, priority, dueDate) {
+   constructor(description, priority, dueDate) {
     this.description = description
     this.priority = priority
     this.dueDate = dueDate
+
+     this.setId()
+  }
+
+  async setId(){
+    this.id = await addNewTask(this)
+    console.log(this.id)
   }
 
 
-  render() { // instance method
+  async render() { // instance method
     console.log(this)
+   
     return `
       <li class="${this.PRIORITY[this.priority]}">
         <p>Description: ${this.description}</p>

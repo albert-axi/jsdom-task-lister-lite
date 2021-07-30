@@ -47,3 +47,34 @@ button {
 .low {
   background-color: green;
 }
+
+ul#nav-mobile {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  justify-content: center;
+
+}
+
+.modal-content {
+  width: 50%;
+  height: 50%;
+  background-color: #ad9be2;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+
+.show {
+  display: flex;
+}
